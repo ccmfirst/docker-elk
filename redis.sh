@@ -8,7 +8,6 @@ chown -R 1001:1001 $DIR
 docker run -itd \
     --name redis-for-log \
     --restart always \
-    --sysctl net.core.somaxconn=100000 \
     -m 1024m \
     -v $DIR:/bitnami/redis/data \
     -e "REDIS_PASSWORD=pAssw0rd" \
